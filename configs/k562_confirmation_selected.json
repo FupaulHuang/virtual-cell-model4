@@ -1,0 +1,43 @@
+{
+  "status": "frozen_confirmation",
+  "selected_for_submission": false,
+  "purpose": "Reserved second-context confirmation; every K562/GWPS response source excluded.",
+  "source": [
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/H1_2025_full_statistics.npz",
+      "weight": 2
+    }
+  ],
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5,
+  "context": [
+    "K562=evaluations/k562_confirmation/context_K562.h5ad"
+  ],
+  "genes": "evaluations/k562_confirmation/gene_names.csv",
+  "targets": "evaluations/k562_confirmation/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "agreement": false,
+  "promoters": null,
+  "name": "k562_confirmation_selected",
+  "output": "outputs/k562_confirmation_selected/prediction.h5ad",
+  "exclude_source_family": [
+    "K562",
+    "GWPS"
+  ]
+}

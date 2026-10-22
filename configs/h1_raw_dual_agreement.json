@@ -1,0 +1,36 @@
+{
+  "purpose": "Validation-only agreement ablation motivated by excess false DE calls in HCT raw transfer; not selected production model",
+  "source": [
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    }
+  ],
+  "context": [
+    "H1=evaluations/h1_validation/context_H1.h5ad"
+  ],
+  "genes": "evaluations/h1_validation/gene_names.csv",
+  "targets": "evaluations/h1_validation/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "raw_dual_agreement",
+  "output": "outputs/h1_raw_dual_agreement/prediction.h5ad",
+  "agreement": true,
+  "agreement_min_effect": 0.02,
+  "agreement_fraction": 0.75
+}

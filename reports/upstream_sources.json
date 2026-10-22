@@ -1,0 +1,14 @@
+{
+  "atlasshift": {
+    "url": "https://github.com/kaipengm2/Virtual-Cell-Challenge-2026.git",
+    "commit": "d24ce4fdae0cd7cba3ba29546cd8737094eae98a"
+  },
+  "sidechain": {
+    "url": "https://github.com/saberhq/sidechain.git",
+    "commit": "6a84a26980af45f72c83fe51c4848679c56ea07f"
+  },
+  "vcc2026-public": {
+    "url": "https://github.com/rpinho/vcc2026",
+    "commit": "e00c9b5575b89c0e150e0480918afc6218861739"
+  }
+}

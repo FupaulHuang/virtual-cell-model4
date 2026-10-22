@@ -1,0 +1,31 @@
+{
+  "purpose": "Fixed zero-response comparator for confirmation; source weight is exactly zero.",
+  "source": [
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 0
+    }
+  ],
+  "context": [
+    "H1=evaluations/h1_test/context_H1.h5ad"
+  ],
+  "genes": "evaluations/h1_test/gene_names.csv",
+  "targets": "evaluations/h1_test/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "h1_test_neutral",
+  "output": "outputs/h1_test_neutral/prediction.h5ad",
+  "cd4": null,
+  "cd4_weight": 0.5
+}

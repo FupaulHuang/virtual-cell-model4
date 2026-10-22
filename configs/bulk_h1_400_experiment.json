@@ -1,0 +1,60 @@
+{
+  "registered_at_utc": "2026-10-21T06:31:53.972399+00:00",
+  "base_config": "configs/dispersion_h1_400_incumbent.json",
+  "cohort_manifest": "evaluations/dispersion_h1_training_400/manifest.json",
+  "reference": "evaluations/dispersion_h1_training_400/reference.h5ad",
+  "existing_incumbent": "outputs/dispersion_h1_400_incumbent/prediction.h5ad",
+  "existing_incumbent_metrics": "evaluations/dispersion_h1_training_400/incumbent_cpu",
+  "arms": {
+    "incumbent": {
+      "raw_bulk_common_subtract": 1.0,
+      "amplitude_bulk": 0.3,
+      "output": "outputs/bulk_h1_400_incumbent/prediction.h5ad",
+      "metrics": "evaluations/dispersion_h1_training_400/incumbent_cpu"
+    },
+    "common05": {
+      "raw_bulk_common_subtract": 0.5,
+      "amplitude_bulk": 0.3,
+      "output": "outputs/bulk_h1_400_common05/prediction.h5ad",
+      "metrics": "evaluations/bulk_h1_training_400/common05_cpu"
+    },
+    "bulk015": {
+      "raw_bulk_common_subtract": 1.0,
+      "amplitude_bulk": 0.15,
+      "output": "outputs/bulk_h1_400_bulk015/prediction.h5ad",
+      "metrics": "evaluations/bulk_h1_training_400/bulk015_cpu"
+    },
+    "bulk060": {
+      "raw_bulk_common_subtract": 1.0,
+      "amplitude_bulk": 0.6,
+      "output": "outputs/bulk_h1_400_bulk060/prediction.h5ad",
+      "metrics": "evaluations/bulk_h1_training_400/bulk060_cpu"
+    }
+  },
+  "fixed": {
+    "arithmetic_common_subtract": 1.0,
+    "arithmetic_amplitude": 0.6,
+    "cd4_common_subtract": 1.0,
+    "cd4_weight": 0.5,
+    "pool": 4,
+    "cells": 400,
+    "seed": 20261021,
+    "raw_source_weights": {
+      "K562": 2,
+      "HCT116": 1,
+      "HEK293T": 1
+    },
+    "excluded_response_family": "H1",
+    "dispersion_policy": "unmodified original emitter; no rejected dispersion transform"
+  },
+  "success": "Lower raw normalized MSE supported by lower uncorrected own-target-excluded log-bulk mean error; all five other raw metrics nonworse within 1e-8; identical finite cohorts; report paired uncertainty",
+  "feasibility": "Preserve original projectionL1<=.03 and fitL1<=.001; incomplete/infeasible arms are not scored and are not replaced",
+  "official_submission_authorized_by_this_plan": false,
+  "conditional_confirmation": {
+    "eligibility": "Strict all-metric development pass plus paired95%interval supporting lower uncorrected meanerror",
+    "selection": "Lowest raw normalized MSE, then lower uncorrected meanerror, then registered armorder for exactties",
+    "action": "Freeze one survivor and compare once with the unchanged incumbent on the unextracted25targetreserve at400cells/target andsame4000controls; no retuning",
+    "if_none": "Keep reserve unextracted; retain incumbent",
+    "official_submission": false
+  }
+}

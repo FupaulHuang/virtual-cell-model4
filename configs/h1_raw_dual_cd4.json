@@ -1,0 +1,35 @@
+{
+  "purpose": "Prespecified source-family addition using published CD4 quality gates; hold other model settings fixed.",
+  "source": [
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    }
+  ],
+  "context": [
+    "H1=evaluations/h1_validation/context_H1.h5ad"
+  ],
+  "genes": "evaluations/h1_validation/gene_names.csv",
+  "targets": "evaluations/h1_validation/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "raw_dual_cd4",
+  "output": "outputs/h1_raw_dual_cd4/prediction.h5ad",
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5
+}

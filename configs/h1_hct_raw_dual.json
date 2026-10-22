@@ -1,0 +1,29 @@
+{
+  "purpose": "Additional prespecified coverage comparison: complete HCT raw source vs strongly filtered HCT/HEK PIE sources, before HEK raw completion.",
+  "source": [
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    }
+  ],
+  "context": [
+    "H1=evaluations/h1_validation/context_H1.h5ad"
+  ],
+  "genes": "evaluations/h1_validation/gene_names.csv",
+  "targets": "evaluations/h1_validation/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "hct_raw_dual",
+  "output": "outputs/h1_hct_raw_dual/prediction.h5ad"
+}

@@ -1,0 +1,39 @@
+{
+  "purpose": "Reserved H1 Test confirmation of the frozen complete-source model; no retuning on outcomes.",
+  "source": [
+    {
+      "path": "data/K562_GWPS_CPM_full_statistics.npz",
+      "weight": 2
+    },
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    }
+  ],
+  "context": [
+    "H1=evaluations/h1_test/context_H1.h5ad"
+  ],
+  "genes": "evaluations/h1_test/gene_names.csv",
+  "targets": "evaluations/h1_test/pert_counts.csv",
+  "cells": 200,
+  "pool": 4,
+  "workers": 4,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "h1_test_selected",
+  "output": "outputs/h1_test_selected/prediction.h5ad",
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5
+}

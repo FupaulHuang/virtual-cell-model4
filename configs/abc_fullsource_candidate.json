@@ -1,0 +1,29 @@
+{
+  "status": "provisional_unselected_pending_holdout_confirmation",
+  "selected_for_submission": false,
+  "purpose": "Prepare an official-panel artifact in parallel with held-out validation. Preparation does not select or submit this candidate.",
+  "source": [
+    {"path": "data/K562_GWPS_CPM_full_statistics.npz", "weight": 2},
+    {"path": "data/processed/HCT116_full_statistics.npz", "weight": 1},
+    {"path": "data/processed/HEK293T_full_statistics.npz", "weight": 1},
+    {"path": "data/H1_2025_full_statistics.npz", "weight": 2}
+  ],
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5,
+  "context": ["A=data/context_A.h5ad", "B=data/context_B.h5ad", "C=data/context_C.h5ad"],
+  "genes": "data/gene_names.csv",
+  "targets": "data/pert_counts.csv",
+  "cells": 400,
+  "pool": 4,
+  "workers": 8,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "agreement": false,
+  "promoters": null,
+  "name": "m4_fullsource_candidate",
+  "output": "outputs/m4_fullsource_candidate/prediction.h5ad"
+}

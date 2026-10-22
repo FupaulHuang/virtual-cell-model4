@@ -1,0 +1,39 @@
+{
+  "purpose": "Frozen Model4 method applied to new 400-cell H1 Training development cohort; all H1 response sources excluded",
+  "source": [
+    {
+      "path": "data/K562_GWPS_CPM_full_statistics.npz",
+      "weight": 2
+    },
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    }
+  ],
+  "context": [
+    "H1=evaluations/dispersion_h1_training_400/context_H1.h5ad"
+  ],
+  "genes": "evaluations/dispersion_h1_training_400/gene_names.csv",
+  "targets": "evaluations/dispersion_h1_training_400/pert_counts.csv",
+  "cells": 400,
+  "pool": 4,
+  "workers": 8,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261021,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "promoters": null,
+  "exclude_source_family": [
+    "H1"
+  ],
+  "name": "dispersion_h1_400_incumbent",
+  "output": "outputs/dispersion_h1_400_incumbent/prediction.h5ad",
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5
+}

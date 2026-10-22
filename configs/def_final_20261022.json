@@ -1,0 +1,45 @@
+{
+  "status": "authorized_final_prediction",
+  "selected_for_submission": true,
+  "purpose": "Final D/E/F prediction using the unchanged validated m4_multisource_dual_v1 model; no experimental component promotion.",
+  "source": [
+    {
+      "path": "data/K562_GWPS_CPM_full_statistics.npz",
+      "weight": 2
+    },
+    {
+      "path": "data/processed/HCT116_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/processed/HEK293T_full_statistics.npz",
+      "weight": 1
+    },
+    {
+      "path": "data/H1_2025_full_statistics.npz",
+      "weight": 2
+    }
+  ],
+  "cd4": "data/CD4_DE_statistics.npz",
+  "cd4_weight": 0.5,
+  "context": [
+    "D=data/final_20261022/context_D.h5ad",
+    "E=data/final_20261022/context_E.h5ad",
+    "F=data/final_20261022/context_F.h5ad"
+  ],
+  "genes": "data/final_20261022/gene_names.csv",
+  "targets": "data/final_20261022/pert_counts.csv",
+  "cells": 400,
+  "pool": 4,
+  "workers": 8,
+  "prior_counts": 100000,
+  "common_subtract": 1.0,
+  "seed": 20261020,
+  "amplitude_cpm": 0.6,
+  "amplitude_bulk": 0.3,
+  "mode": "dual",
+  "agreement": false,
+  "promoters": null,
+  "name": "m4_multisource_dual_v1_final_20261022",
+  "output": "outputs/m4_multisource_dual_v1_final_20261022/prediction.h5ad"
+}
